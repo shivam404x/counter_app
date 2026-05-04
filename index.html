@@ -1,13 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my-app</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSONPlaceholder API Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>JSONPlaceholder API Demo</h1>
+        
+        <div class="button-group">
+            <button onclick="fetchUsers()">Get Users</button>
+            <button onclick="fetchPosts()">Get Posts</button>
+            <button onclick="fetchComments()">Get Comments</button>
+        </div>
+
+        <div id="loading" class="loading" style="display:none;">
+            <p>Loading...</p>
+        </div>
+
+        <div id="data-container" class="data-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
